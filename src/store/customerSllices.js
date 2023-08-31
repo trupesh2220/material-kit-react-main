@@ -172,7 +172,6 @@ export function fetchProducts(data) {
       dispatch(setProducts(data));
       setTimeout(() => {
         dispatch(setStatus(false));
-        alert("success");
       }, 2000);
     } catch (err) {
       console.log(err);

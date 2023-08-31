@@ -58,6 +58,8 @@ const Page = () => {
       })
     );
   };
+  const [changeValue, setChangeValue] = useState()
+  console.log(changeValue)
   return (
     <>
       <Head>
@@ -112,8 +114,9 @@ const Page = () => {
                 </Button>
               </div>
             </Stack>
-            <CustomersSearch />
+            <CustomersSearch changeValue={changeValue} setChangeValue={setChangeValue} />
             <CustomersTable
+              changeValue={changeValue}
               count={data.length}
               items={customers}
               onDeselectAll={customersSelection.handleDeselectAll}
